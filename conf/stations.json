@@ -1,0 +1,48 @@
+{
+  "stations": [
+    {
+      "title": "JOE FM",
+      "url": "http://icecast-qmusic.cdp.triple-it.nl/JOEfm_be_live_128.mp3"
+    },
+    {
+      "title": "MNM",
+      "url": "http://icecast.vrtcdn.be/mnm-high.mp3"
+    },
+    {
+      "title": "MNM Hits",
+      "url": "http://icecast.vrtcdn.be/mnm_hits-high.mp3"
+    },
+    {
+      "title": "MNM Hits 90's && 00's",
+      "url": "http://icecast.vrtcdn.be/mnm_90s00s-high.mp3"
+    },
+    {
+      "title": "Nostalgie",
+      "url": "http://nostalgiewhatafeeling.ice.infomaniak.ch/nostalgiewhatafeeling-128.mp3"
+    },
+    {
+      "title": "Q Music",
+      "url": "http://icecast-qmusic.cdp.triple-it.nl/Qmusic_be_live_64.aac"
+    },
+    {
+      "title": "Radio 1",
+      "url": "http://icecast.vrtcdn.be/radio1-high.mp3"
+    },
+    {
+      "title": "Radio 2",
+      "url": "http://icecast.vrtcdn.be/ra2lim-high.mp3"
+    },
+    {
+      "title": "RGR FM",
+      "url": "http://stream.intronic.nl/rgrfm"
+    },
+    {
+      "title": "Rock FM",
+      "url": "http://streams.movemedia.eu:8440/;stream"
+    },
+    {
+      "title": "Studio Brussel",
+      "url": "http://icecast.vrtcdn.be/stubru-high.mp3"
+    }
+  ]
+}
