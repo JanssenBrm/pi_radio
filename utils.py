@@ -1,5 +1,6 @@
-import socket
+from subprocess import check_output
+
 
 def get_ip_address():
-    hostname = socket.gethostname()
-    return socket.gethostbyname(hostname)
+    ips = check_output(['hostname', '--all-ip-addresses'])
+    return [ip for ip in ips.split(' ') if '192.168.' in ip][0]
