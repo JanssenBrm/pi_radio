@@ -4,6 +4,7 @@ from flask import request
 import subprocess
 
 from mpc import mpc_command
+from utils import get_ip_address
 
 app = Flask(__name__)
 
@@ -25,4 +26,4 @@ def stop_radio():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host=get_ip_address())
