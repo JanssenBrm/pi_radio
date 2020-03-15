@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask app</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <script type="text/javascript">
+
+        const status = "Playing";
+
+        function sendGet(url, callback) {
+            const request = new XMLHttpRequest();
+            request.open("GET", url);
+            request.send();
+            request.onreadystatechange = callback
+        }
+        function startRadio() {
+            console.log("PLAY RADIO");
+            sendGet('/play', function () {
+                if (this.readyState === 4)
+                    if(this.status === 200) {
+                        console.log("PLAY OK");
+                    } else {
+                        alert("Kon de radio niet opstarten");
+                    }
+            });
+        }
+        function stopRadio() {
+            console.log("STOP RADIO");
+            sendGet('/stop', function () {
+                if (this.readyState === 4)
+                    if(this.status === 200) {
+                        console.log("PLAY OK");
+                    } else {
+                        alert("Kon de radio niet stoppen");
+                    }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>PPJ's Radio</h1>
+        <div class="form">
+            <div class="actions">
+                 <button class="btn btn-primary btn-lg"  onclick="startRadio()"><i class="fa fa-play"></i>Play</button>
+                 <button class="btn btn-primary btn-lg"  onclick="stopRadio()"><i class="fa fa-stop"></i>Stop</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
