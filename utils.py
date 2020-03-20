@@ -1,4 +1,5 @@
 import json
+import os
 from subprocess import check_output
 
 from mpc import mpc_command
@@ -9,7 +10,7 @@ def get_ip_address():
     return [ip for ip in ips.split(' ') if '192.168.' in ip][0]
 
 def get_stationlist():
-    with open('./conf/stations.json') as stations:
+    with open('{}/conf/stations.json'.format(os.path.dirname(os.path.abspath(__file__)))) as stations:
         return json.load(stations)['stations']
 
 def reload_playlist():
