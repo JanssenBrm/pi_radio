@@ -7,7 +7,7 @@ from mpc import mpc_command
 
 def get_ip_address():
     ips = check_output(['hostname', '--all-ip-addresses'])
-    return [ip for ip in ips.split(' ') if '192.168.' in ip][0]
+    return '192.168.0.120' #[ip for ip in str(ips).split(' ') if '192.168.' in ip][0]
 
 def get_stationlist():
     with open('{}/conf/stations.json'.format(os.path.dirname(os.path.abspath(__file__)))) as stations:

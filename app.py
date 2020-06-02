@@ -30,7 +30,7 @@ def stop_radio():
 def get_status():
     position = mpc_get_position()
     status = {
-        "volume": int(mpc_command(['mpc', 'volume']).split(':')[1].replace('%', '')),
+        "volume": int(str(mpc_command(['mpc', 'volume'])).split(':')[1].replace('%\\n\'', '').strip()),
         "playing": True if mpc_command(['mpc', 'current']) else False,
         "radio": position
     }
