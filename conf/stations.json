@@ -43,6 +43,14 @@
     {
       "title": "Studio Brussel",
       "url": "http://icecast.vrtcdn.be/stubru-high.mp3"
+    },
+    {
+      "title": "Studio Brussel - Bruut",
+      "url": "http://icecast.vrtcdn.be/stubru_bruut-high.mp3"
+    },
+    {
+      "title": "Studio Brussel - Tijdloze",
+      "url": "http://icecast.vrtcdn.be/stubru_tijdloze-high.mp3"
     }
   ]
 }
