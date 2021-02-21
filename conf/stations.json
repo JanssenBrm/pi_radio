@@ -25,6 +25,10 @@
       "url": "http://icecast-qmusic.cdp.triple-it.nl/Qmusic_be_live_64.aac"
     },
     {
+      "title": "Q Music - Foute Radio",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/QFOUTERADIO.mp3"
+    },
+    {
       "title": "Radio 1",
       "url": "http://icecast.vrtcdn.be/radio1-high.mp3"
     },
