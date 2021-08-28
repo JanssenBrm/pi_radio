@@ -54,5 +54,5 @@ def set_volume(volume):
 
 if __name__ == "__main__":
     reload_playlist()
-    app.run(host=get_ip_address())
+    app.run(host='0.0.0.0')
 
