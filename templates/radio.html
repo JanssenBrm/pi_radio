@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PPJ's Radio</title>
+    <title>PI Radio</title>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
     <script type="text/javascript">
 
         const status = "Playing";
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             getStatus();
             getStations();
         });
@@ -36,6 +37,7 @@
                     }
                 })
         }
+
         function getStations() {
             sendGet('/stations')
                 .done((stations) => {
@@ -52,16 +54,16 @@
 
         function sendGet(url) {
             return $.ajax({
-              method: "GET",
-              url: url
+                method: "GET",
+                url: url
             })
         }
 
         function sendPost(url, data) {
             return $.ajax({
-              method: "POST",
-              url: url,
-              data: data
+                method: "POST",
+                url: url,
+                data: data
             })
         }
 
@@ -73,10 +75,11 @@
                     alert('Could not start radio');
                 });
         }
+
         function stopRadio() {
             console.log("STOP RADIO");
             sendGet('/stop')
-                 .done(() => getStatus())
+                .done(() => getStatus())
                 .fail(() => {
                     alert('Could not stop radio');
                 });
@@ -85,7 +88,7 @@
         function updateStation(station) {
             console.log("Update station", station);
             sendPost('/stations/' + station)
-                 .done(() => getStatus())
+                .done(() => getStatus())
                 .fail(() => {
                     alert('Could not change station');
                     getStatus();
@@ -95,7 +98,7 @@
         function setVolume(volume) {
             console.log("Update volume", volume);
             sendPost('/volume/' + volume)
-                 .done(() => getStatus())
+                .done(() => getStatus())
                 .fail(() => {
                     alert('Could not change volume');
                 })
@@ -103,31 +106,32 @@
     </script>
 </head>
 <body>
-    <div class="content">
-        <div class="title">
-            <h1>PPJ's Radio</h1>
-        </div>
-        <div class="form">
-            <div class="form-main">
-                    <div class="formcontrol">
-                        <label for="station">
-                            Station:
-                        </label>
-                        <select id="station" class="form-control" onchange="updateStation(this.value)">
-                        </select>
-                    </div>
-                     <div class="formcontrol">
-                         <label for="volume">
-                             Volume (<span id="volumeVal"></span>):
-                         </label>
-                        <input id="volume" class="form-control slider" type="range" min="0" max="100" onchange="setVolume(this.value)">
-                    </div>
+<div class="content">
+    <div class="title">
+        <h1>Radio</h1>
+    </div>
+    <div class="form">
+        <div class="form-main">
+            <div class="formcontrol">
+                <label for="station">
+                    Station:
+                </label>
+                <select id="station" class="form-control" onchange="updateStation(this.value)">
+                </select>
+            </div>
+            <div class="formcontrol">
+                <label for="volume">
+                    Volume (<span id="volumeVal"></span>):
+                </label>
+                <input id="volume" class="form-control slider" type="range" min="0" max="100"
+                       onchange="setVolume(this.value)">
             </div>
         </div>
-        <div class="actions">
-            <button class="btn btn-primary btn-lg"  id="play" onclick="startRadio()"><i class="fa fa-play"></i>Play</button>
-            <button class="btn btn-primary btn-lg"  id="stop" onclick="stopRadio()"><i class="fa fa-stop"></i>Stop</button>
-        </div>
     </div>
+    <div class="actions">
+        <button class="btn btn-primary btn-lg" id="play" onclick="startRadio()"><i class="fa fa-play"></i>Play</button>
+        <button class="btn btn-primary btn-lg" id="stop" onclick="stopRadio()"><i class="fa fa-stop"></i>Stop</button>
+    </div>
+</div>
 </body>
 </html>
