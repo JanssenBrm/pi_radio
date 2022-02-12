@@ -12,6 +12,8 @@ In my case, I have used this project to turn my Raspberry Pi into a device that 
 streams. After hooking up my Raspberry Pi to a set of speakers in the garden, I can now listen to some music outdoors.
 And the best thing of it all, I can easily control what is being played by using my smartphone!
 
+![](https://github.com/JanssenBrm/pi_radio/blob/master/screenshots/pi_radio.png)
+
 ## Try it yourself!
 
 Before you start exploring the project, make sure the following prerequisites are installed on your machine/device:
