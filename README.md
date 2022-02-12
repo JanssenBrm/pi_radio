@@ -1,6 +1,6 @@
 # PI Radio 🍇
 
-![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/github/last-commit/janssenbrm/pi_radio?style=for-the-badge)
 
 With the goal to put my Raspberry Pi to use as a streaming stataion, I've created this general purpose project. Using
 the `flask` library, the code in this project will start a small webserver that serves a main webpage. By using the
