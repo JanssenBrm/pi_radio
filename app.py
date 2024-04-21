@@ -1,3 +1,5 @@
+import logging
+
 from flask import Flask
 from flask import jsonify
 from flask import render_template
@@ -5,6 +7,8 @@ from flask import render_template
 from mpc import mpc_get_position, mpc_command
 from utils import get_stationlist, reload_playlist
 
+logging.basicConfig(filename='pyradio.log', encoding='utf-8',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 app = Flask('Radio PPJ')
 
 
@@ -36,6 +40,7 @@ def get_status():
             "error": ""
         }
     except Exception as error:
+        logging.error(f'Cannot retrieve status: {error}')
         status = {
             "error": str(error),
         }
