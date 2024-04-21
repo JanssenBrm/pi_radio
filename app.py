@@ -27,12 +27,18 @@ def stop_radio():
 
 @app.route("/status", methods=['GET'])
 def get_status():
-    position = mpc_get_position()
-    status = {
-        "volume": int(str(mpc_command(['mpc', 'volume'])).split(':')[1].replace('%\\n\'', '').strip()),
-        "playing": True if mpc_command(['mpc', 'current']) else False,
-        "radio": position
-    }
+    try:
+        position = mpc_get_position()
+        status = {
+            "volume": int(str(mpc_command(['mpc', 'volume'])).split(':')[1].replace('%\\n\'', '').strip()),
+            "playing": True if mpc_command(['mpc', 'current']) else False,
+            "radio": position,
+            "error": ""
+        }
+    except Exception as error:
+        status = {
+            "error": str(error),
+        }
     return jsonify(status)
 
 

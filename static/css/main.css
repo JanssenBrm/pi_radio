@@ -59,6 +59,11 @@ button i {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+}
+.actions .error {
+    flex: 1;
+    color: red;
 }
 
 .form-control {

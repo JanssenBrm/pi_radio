@@ -22,7 +22,7 @@
                 .done((status) => {
                     console.log(status);
                     $("#volume").val(status.volume);
-                    $("#volumeVal").text(status.volume + '%');
+                    $("#volumeVal").text(status.volume ? status.volume + '%' : '');
 
                     if (status.radio) {
                         $("#station").val(status.radio)
@@ -34,6 +34,10 @@
                     } else {
                         $("#play").show();
                         $("#stop").hide();
+                    }
+
+                    if (status.error) {
+                        $("#error").text(status.error);
                     }
                 })
         }
@@ -129,6 +133,10 @@
         </div>
     </div>
     <div class="actions">
+        <div class="error">
+            <i class="fa fa-exclamation-triangle"></i>
+            <span id="error"></span>
+        </div>
         <button class="btn btn-primary btn-lg" id="play" onclick="startRadio()"><i class="fa fa-play"></i>Play</button>
         <button class="btn btn-primary btn-lg" id="stop" onclick="stopRadio()"><i class="fa fa-stop"></i>Stop</button>
     </div>
