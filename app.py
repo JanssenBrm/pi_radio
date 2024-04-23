@@ -7,7 +7,7 @@ from flask import render_template
 from mpc import mpc_get_position, mpc_command
 from utils import get_stationlist, reload_playlist
 
-logging.basicConfig(filename='pyradio.log', encoding='utf-8',
+logging.basicConfig(filename='pyradio.log',
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 app = Flask('Radio PPJ')
 
