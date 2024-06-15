@@ -55,6 +55,14 @@
     {
       "title": "Studio Brussel - Tijdloze",
       "url": "http://icecast.vrtcdn.be/stubru_tijdloze-high.mp3"
+    },
+    {
+      "title": "TOP - BAM!",
+      "url": "https://25483.live.streamtheworld.com/TOPBAM.mp3"
+    },
+    {
+      "title": "TOP - Schaamteloos!",
+      "url": "https://25483.live.streamtheworld.com/TOPSCHAAMTELOZE.mp3"
     }
   ]
 }
