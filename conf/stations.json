@@ -2,7 +2,7 @@
   "stations": [
     {
       "title": "JOE FM",
-      "url": "http://icecast-qmusic.cdp.triple-it.nl/JOEfm_be_live_128.mp3"
+      "url": "https://icecast-qmusicbe-cdp.triple-it.nl/joe.mp3"
     },
     {
       "title": "MNM",
@@ -13,20 +13,20 @@
       "url": "http://icecast.vrtcdn.be/mnm_hits-high.mp3"
     },
     {
-      "title": "MNM Hits 90's && 00's",
-      "url": "http://icecast.vrtcdn.be/mnm_90s00s-high.mp3"
-    },
-    {
       "title": "Nostalgie",
       "url": "http://nostalgiewhatafeeling.ice.infomaniak.ch/nostalgiewhatafeeling-128.mp3"
     },
     {
+      "title": "Nostalgie 90&00's",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWAF90.mp3"
+    },
+    {
       "title": "Q Music",
-      "url": "http://icecast-qmusic.cdp.triple-it.nl/Qmusic_be_live_64.aac"
+      "url": "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.mp3"
     },
     {
       "title": "Q Music - Foute Radio",
-      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/QFOUTERADIO.mp3"
+      "url": "https://icecast-qmusicbe-cdp.triple-it.nl/q-foute-radio.mp3"
     },
     {
       "title": "Radio 1",
@@ -41,10 +41,6 @@
       "url": "http://stream.intronic.nl/rgrfm"
     },
     {
-      "title": "Rock FM",
-      "url": "http://streams.movemedia.eu:8440/;stream"
-    },
-    {
       "title": "Studio Brussel",
       "url": "http://icecast.vrtcdn.be/stubru-high.mp3"
     },
@@ -57,12 +53,24 @@
       "url": "http://icecast.vrtcdn.be/stubru_tijdloze-high.mp3"
     },
     {
+      "title": "Studio Brussel - Jaren 00",
+      "url": "https://icecast.vrtcdn.be/stubru_dejarennul-high.mp3"
+    },
+    {
       "title": "TOP - BAM!",
-      "url": "https://25483.live.streamtheworld.com/TOPBAM.mp3"
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOPBAM.mp3"
+    },
+    {
+      "title": "TOP - Kamping Kitsch!",
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOP_NEWBEAT.mp3"
     },
     {
       "title": "TOP - Schaamteloos!",
-      "url": "https://25483.live.streamtheworld.com/TOPSCHAAMTELOZE.mp3"
+      "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/TOPSCHAAMTELOZE.MP3"
+    },
+    {
+      "title": "TrendyFM!",
+      "url": "http//stream.trendyfm.be:80/aac"
     }
   ]
 }
